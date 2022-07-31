@@ -7,7 +7,7 @@ import (
 
 func isCancelled(ctx context.Context) bool {
 	select {
-	case <-ctx.Done:
+	case <-ctx.Done():
 		return true
 	default:
 		return false
